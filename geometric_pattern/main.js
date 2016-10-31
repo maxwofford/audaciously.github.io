@@ -7,5 +7,15 @@ function setup() {
 }
 
 function draw() {
-    ellipse(width/2,height/2,circleDiameter,circleDiameter);
+    var y = 0;
+    while (y <= height) {
+    
+        var x = 0;
+        while (x <= width) {
+            ellipse(x, y, circleDiameter, circleDiameter)
+        x = x + circleDiameter;
+    }
+    
+    y = y + circleDiameter;
+    }
 }
