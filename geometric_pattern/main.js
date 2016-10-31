@@ -11,8 +11,9 @@ function setup() {
 function draw() {
     var isShifted = false;
     
-    var y = 0;
-    while (y <= height) {
+    var y = height;
+    while (y >= 0) {
+        
         var x;
         
         if (isShifted) {
@@ -22,11 +23,11 @@ function draw() {
         }
         
         while (x <= width) {
-            ellipse(x, y, circleDiameter, circleDiameter)
+            ellipse(x, y, circleDiameter, circleDiameter);
             x = x + circleDiameter;
         }
     
-        y = y + circleRadius;
+        y = y - circleRadius;
         isShifted = !isShifted;
     }
 }
